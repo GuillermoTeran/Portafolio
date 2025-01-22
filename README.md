@@ -7,4 +7,9 @@ https://github.com/GuillermoTeran/Proyecto-integrado-1
 Tomar decisiones de negocio basado en datos 
 https://github.com/GuillermoTeran/Tomar-decisiones-de-negocio-basado-en-datos
 
+Recopilación y almacenamiento de datos (SQL)
+https://github.com/GuillermoTeran/Recopilacion-y-almacenamiento-de-datos-SQL-
+
+
+
 
