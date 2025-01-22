@@ -19,6 +19,9 @@ https://github.com/GuillermoTeran/Analisis-exploratorio-de-datos-EDA--prueba-de-
 Análisis estadístico de datos
 https://github.com/GuillermoTeran/Analisis-estadistico-de-datos
 
+Análisis de negocio
+https://github.com/GuillermoTeran/Analisis-de-negocio
+
 
 
 
