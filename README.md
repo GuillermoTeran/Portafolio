@@ -13,6 +13,9 @@ https://github.com/GuillermoTeran/Recopilacion-y-almacenamiento-de-datos-SQL-
 Análisis exploratorio de datos EDA 
 https://github.com/GuillermoTeran/Analisis-exploratorio-de-datos-EDA
 
+Análisis exploratorio de datos EDA prueba de hipótesis
+https://github.com/GuillermoTeran/Analisis-exploratorio-de-datos-EDA--prueba-de-hipotesis
+
 
 
 
