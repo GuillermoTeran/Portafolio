@@ -3,5 +3,7 @@ Resúmen de proyectos realizados en los cuales se aplicaron las habilidades desa
 
 Proyecto integrado 1
 https://github.com/GuillermoTeran/Proyecto-integrado-1
+print()
 Tomar decisiones de negocio basado en datos 
 https://github.com/GuillermoTeran/Tomar-decisiones-de-negocio-basado-en-datos
+print()
