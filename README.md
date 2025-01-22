@@ -16,6 +16,9 @@ https://github.com/GuillermoTeran/Analisis-exploratorio-de-datos-EDA
 Análisis exploratorio de datos EDA prueba de hipótesis
 https://github.com/GuillermoTeran/Analisis-exploratorio-de-datos-EDA--prueba-de-hipotesis
 
+Análisis estadístico de datos
+https://github.com/GuillermoTeran/Analisis-estadistico-de-datos
+
 
 
 
