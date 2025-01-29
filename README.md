@@ -22,6 +22,9 @@ https://github.com/GuillermoTeran/Analisis-estadistico-de-datos
 Análisis de negocio
 https://github.com/GuillermoTeran/Analisis-de-negocio
 
+Proyecto integrado 2
+
+
 
 
 
