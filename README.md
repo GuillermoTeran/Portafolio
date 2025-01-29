@@ -23,6 +23,7 @@ Análisis de negocio
 https://github.com/GuillermoTeran/Analisis-de-negocio
 
 Proyecto integrado 2
+https://github.com/GuillermoTeran/Proyecto-integrado-2 
 
 
 
