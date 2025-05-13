@@ -26,7 +26,7 @@ Proyecto integrado 2
 https://github.com/GuillermoTeran/Proyecto-integrado-2 
 
 Probabilidad de cancelacion de suscripciones de clientes 
-
+https://github.com/GuillermoTeran/Probabilidad-de-cancelacion-de-suscripciones-de-clientes-
 
 Automatiacion Dashboard Tableu
 
