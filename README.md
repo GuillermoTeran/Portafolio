@@ -29,7 +29,7 @@ Probabilidad de cancelacion de suscripciones de clientes
 https://github.com/GuillermoTeran/Probabilidad-de-cancelacion-de-suscripciones-de-clientes-
 
 Automatiacion Dashboard Tableu
-
+https://github.com/GuillermoTeran/Automatizaci-n-Dashboard-Tableu
 
 Proyecto final bootcamp
 
