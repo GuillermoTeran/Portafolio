@@ -25,6 +25,15 @@ https://github.com/GuillermoTeran/Analisis-de-negocio
 Proyecto integrado 2
 https://github.com/GuillermoTeran/Proyecto-integrado-2 
 
+Probabilidad de cancelacion de suscripciones de clientes 
+
+
+Automatiacion Dashboard Tableu
+
+
+Proyecto final bootcamp
+
+
 
 
 
