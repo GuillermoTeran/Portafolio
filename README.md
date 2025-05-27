@@ -1,4 +1,4 @@
-# portafolio-
+# Portafolio
 Resúmen de proyectos personales y del bootcamp realizados en los cuales se aplicaron las habilidades adquiridas como análisis exploratorio de datos EDA, análisis estadístico de datos, prueba de hipótesis, cálculo de métricas, implementación de una prueba A/B, probabilidades, pronósticos y tableros de visualización.
 
 Proyecto integrado 1
