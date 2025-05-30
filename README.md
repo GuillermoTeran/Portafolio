@@ -72,6 +72,7 @@ Python (pandas, numpy, matplotlib, seaborn, scikit-learn, scipy)
 Jupyter Notebook
 
 Algoritmos de machine learning supervisado y no supervisado
+
 https://github.com/GuillermoTeran/Prediccion-de-cancelacion-de-clientes-y-segmentacion-de-usuarios-Proyecto-para-Model-Fitness
 
 
