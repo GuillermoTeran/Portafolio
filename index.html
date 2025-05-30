@@ -117,7 +117,6 @@
   <nav>
     <a href="#datos">Análisis de Datos / Data Analysis</a>
     <a href="#dashboards">Dashboards en Tableau</a>
-    <a href="#experimentos">Pruebas A/B y UX / A/B Testing & UX</a>
     <a href="#contacto">Contáctame / Contact Me</a>
   </nav>
   <div class="filter">
@@ -126,7 +125,6 @@
       <option value="all">Todos / All</option>
       <option value="datos">Análisis de Datos</option>
       <option value="dashboards">Dashboards</option>
-      <option value="experimentos">Experimentos</option>
     </select>
   </div>
   <div class="container" id="projects-container"></div>
@@ -140,9 +138,34 @@
   </footer>
   <script>
     const projects = {
-      datos: [...projects.datos],
-      dashboards: [...projects.dashboards],
-      experimentos: [...projects.experimentos]
+      datos: [
+        {
+          title: "Pruebas de hipótesis y experimentos A/B - Proyecto para SkyAlert",
+          description: "Análisis estadístico para evaluar versiones de página web y mejorar conversiones usando pruebas A/B.",
+          description_en: "Statistical analysis to evaluate web page versions and improve conversions using A/B testing.",
+          url: "https://github.com/GuillermoTeran/Proyecto-SkyAlert-AB"
+        },
+        {
+          title: "Estudio de correlaciones de accidentes viales y delitos en CDMX",
+          description: "Análisis de correlación entre accidentes de tránsito y criminalidad por alcaldía utilizando pandas y geopandas.",
+          description_en: "Correlation analysis between traffic accidents and crime by borough using pandas and geopandas.",
+          url: "https://github.com/GuillermoTeran/Estudio-accidentes-delitos-CDMX"
+        },
+        {
+          title: "Análisis de eficiencia de marketing y comportamiento de clientes — Showz",
+          description: "Evaluación del ROI de canales de adquisición, segmentación de clientes y recomendaciones de inversión.",
+          description_en: "Evaluation of ROI for acquisition channels, customer segmentation, and investment recommendations.",
+          url: "https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz"
+        }
+      ],
+      dashboards: [
+        {
+          title: "Dashboard de accidentes viales en la CDMX con Tableau",
+          description: "Visualización de datos de accidentes para entender patrones por zona y tipo de incidente.",
+          description_en: "Visualization of accident data to understand patterns by area and type of incident.",
+          url: "https://public.tableau.com/views/DashboardAccidentesCDMX_17099380248260/DashboardAccidentesCDMX?:language=es-ES&:sid=&:display_count=n&:origin=viz_share_link"
+        }
+      ]
     };
 
     let currentLang = 'es';
@@ -156,8 +179,7 @@
         const title = document.createElement('h2');
         title.textContent = {
           datos: currentLang === 'es' ? 'Análisis de Datos' : 'Data Analysis',
-          dashboards: currentLang === 'es' ? 'Dashboards en Tableau' : 'Tableau Dashboards',
-          experimentos: currentLang === 'es' ? 'Pruebas A/B y UX' : 'A/B Testing & UX'
+          dashboards: currentLang === 'es' ? 'Dashboards en Tableau' : 'Tableau Dashboards'
         }[key];
         section.appendChild(title);
 
