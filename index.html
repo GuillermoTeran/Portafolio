@@ -2,96 +2,127 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portafolio de Analista de Datos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Guillermo Terán</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Guillermo Terán</h1>
-      <p class="subtitle">Analista de Datos | Exploración • Visualización • Insights</p>
-    </header>
-
-    <section class="about">
-      <p>Soy un analista de datos con experiencia en análisis exploratorio, análisis estadístico, pruebas de hipótesis, SQL, probabilidades, pronósticos y visualización de datos. Aquí puedes ver algunos de mis proyectos destacados.</p>
-    </section>
-
-    <section class="projects">
-      <h2>Proyectos</h2>
-      <ul>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Proyecto-integrado-1/blob/main/Proyecto-integrado-1.ipynb" target="_blank">
-            Proyecto Integrado 1
-          </a>
-          <p>Análisis completo usando EDA, métricas clave y visualizaciones para apoyar decisiones de negocio.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Tomar-decisiones-de-negocio-basado-en-datos/blob/main/Tomar-decisiones-de-negocio-basado-en-datos.ipynb" target="_blank">
-            Tomar decisiones de negocio basado en datos
-          </a>
-          <p>Evaluación de métricas de negocio, segmentación de usuarios y recomendaciones accionables.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Recopilacion-y-almacenamiento-de-datos-SQL-/blob/main/Recopilacion-y-almacenamiento-de-datos-SQL.ipynb" target="_blank">
-            Recopilación y almacenamiento de datos (SQL)
-          </a>
-          <p>Consultas SQL para extracción, transformación y carga de datos desde múltiples fuentes.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Analisis-exploratorio-de-datos-EDA/blob/main/Analisis-exploratorio-de-datos-EDA.ipynb" target="_blank">
-            Análisis exploratorio de datos (EDA)
-          </a>
-          <p>Exploración inicial de datos, limpieza y visualización con pandas y matplotlib.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Analisis-exploratorio-de-datos-EDA--prueba-de-hipotesis/blob/main/Analisis-exploratorio-de-datos-EDA--prueba-de-hipotesis.ipynb" target="_blank">
-            EDA y prueba de hipótesis
-          </a>
-          <p>Validación de hipótesis estadísticas a partir de datos exploratorios con pruebas t y chi-cuadrado.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Analisis-estadistico-de-datos/blob/main/Analisis-estadistico-de-datos.ipynb" target="_blank">
-            Análisis estadístico de datos
-          </a>
-          <p>Aplicación de técnicas estadísticas para identificar tendencias y patrones.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Analisis-de-negocio/blob/main/Analisis-de-negocio.ipynb" target="_blank">
-            Análisis de negocio
-          </a>
-          <p>Interpretación de datos operativos para tomar decisiones estratégicas informadas.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Proyecto-integrado-2/blob/main/Proyecto-integrado-2.ipynb" target="_blank">
-            Proyecto Integrado 2
-          </a>
-          <p>Estudio integral de negocio, incluyendo análisis cuantitativo y modelo predictivo.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Probabilidad-de-cancelacion-de-suscripciones-de-clientes-/blob/main/Probabilidad-de-cancelacion-de-suscripciones-de-clientes.ipynb" target="_blank">
-            Probabilidad de cancelación de suscripciones
-          </a>
-          <p>Predicción del churn de clientes usando análisis de comportamiento y regresión logística.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Automatizaci-n-Dashboard-Tableu/blob/main/Automatizaci%C3%B3n%20Dashboard%20Tableu.ipynb" target="_blank">
-            Automatización Dashboard Tableau
-          </a>
-          <p>Preparación y automatización de datos para visualizaciones interactivas en Tableau.</p>
-        </li>
-        <li>
-          <a href="https://nbviewer.org/github/GuillermoTeran/Proyecto-final/blob/main/Proyecto-final.ipynb" target="_blank">
-            Proyecto final bootcamp
-          </a>
-          <p>Proyecto de cierre integrando todas las habilidades adquiridas: desde SQL hasta análisis avanzado.</p>
-        </li>
-      </ul>
-    </section>
-
-    <footer>
-      <p>¿Te interesa colaborar? <a href="mailto:tucorreo@ejemplo.com">Contáctame</a> o conéctate en <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>.</p>
-    </footer>
+  <header>
+    <img src="profile.jpg" alt="Foto de perfil de Guillermo Terán" class="profile-photo" />
+    <h1 id="titulo">Portafolio de Guillermo Terán</h1>
+    <button class="language-toggle" onclick="toggleLanguage()">EN/ES</button>
+  </header>
+  <nav>
+    <a href="#analisis">Análisis de Datos</a>
+    <a href="#experimentos">Pruebas A/B y Experimentos</a>
+    <a href="#marketing">Marketing y Comportamiento</a>
+  </nav>
+  <div class="filter">
+    <label for="category">Filtrar por categoría:</label>
+    <select id="category" onchange="filterProjects()">
+      <option value="all">Todos</option>
+      <option value="analisis">Análisis de Datos</option>
+      <option value="experimentos">Pruebas A/B</option>
+      <option value="marketing">Marketing</option>
+    </select>
   </div>
+  <div class="container">
+
+    <!-- Sección Análisis de Datos -->
+    <section id="analisis" class="project-section">
+      <h2 class="es">Análisis de Datos</h2>
+      <h2 class="en hidden">Data Analysis</h2>
+
+      <!-- Proyecto 1 -->
+      <article class="project">
+        <h3 class="es">Análisis de ventas de videojuegos — Proyecto Ice Games</h3>
+        <h3 class="en hidden">Video Game Sales Analysis — Ice Games Project</h3>
+        <p class="es">
+          Este proyecto consistió en el análisis y visualización de un conjunto de datos de ventas de videojuegos para detectar patrones y tendencias de éxito.
+        </p>
+        <p class="en hidden">
+          This project consisted of analyzing and visualizing a video game sales dataset to detect patterns and success trends.
+        </p>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games" target="_blank" class="project-link es">Ver proyecto</a>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games" target="_blank" class="project-link en hidden">View Project</a>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="project">
+        <h3 class="es">Análisis de comportamiento de compra de clientes — Proyecto Instacart</h3>
+        <h3 class="en hidden">Customer Purchase Behavior Analysis — Instacart Project</h3>
+        <p class="es">
+          Análisis de datos de Instacart para explorar hábitos de compra, limpieza de datos y visualización de insights clave sobre frecuencia y reorden de productos.
+        </p>
+        <p class="en hidden">
+          Analysis of Instacart data to explore shopping habits, data cleaning, and visualization of key insights about product frequency and reorder.
+        </p>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart" target="_blank" class="project-link es">Ver proyecto</a>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart" target="_blank" class="project-link en hidden">View Project</a>
+      </article>
+    </section>
+
+    <!-- Sección Pruebas A/B y Experimentos -->
+    <section id="experimentos" class="project-section">
+      <h2 class="es">Pruebas A/B y Experimentos</h2>
+      <h2 class="en hidden">A/B Testing and Experiments</h2>
+
+      <!-- Proyecto 1 -->
+      <article class="project">
+        <h3 class="es">Análisis de prueba A/B para optimización de campaña digital — Proyecto AB Test</h3>
+        <h3 class="en hidden">A/B Test Analysis for Digital Campaign Optimization — AB Test Project</h3>
+        <p class="es">
+          Implementé y analicé una prueba A/B para optimizar las conversiones de una campaña publicitaria digital, incluyendo limpieza de datos y test estadísticos.
+        </p>
+        <p class="en hidden">
+          Implemented and analyzed an A/B test to optimize conversions of a digital advertising campaign, including data cleaning and statistical testing.
+        </p>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-prueba-AB-para-optimizacion-de-campana-digital-Proyecto-AB-Test" target="_blank" class="project-link es">Ver proyecto</a>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-prueba-AB-para-optimizacion-de-campana-digital-Proyecto-AB-Test" target="_blank" class="project-link en hidden">View Project</a>
+      </article>
+    </section>
+
+    <!-- Sección Marketing y Comportamiento -->
+    <section id="marketing" class="project-section">
+      <h2 class="es">Marketing y Comportamiento</h2>
+      <h2 class="en hidden">Marketing and Customer Behavior</h2>
+
+      <!-- Proyecto 1 -->
+      <article class="project">
+        <h3 class="es">Análisis de eficiencia de marketing y comportamiento de clientes — Proyecto para Showz</h3>
+        <h3 class="en hidden">Marketing Efficiency and Customer Behavior Analysis — Showz Project</h3>
+        <p class="es">
+          Estudio integral para optimizar gastos de marketing y entender el comportamiento de usuarios en la plataforma de venta de entradas Showz.
+        </p>
+        <p class="en hidden">
+          Comprehensive study to optimize marketing expenses and understand user behavior on the Showz ticket sales platform.
+        </p>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz" target="_blank" class="project-link es">Ver proyecto</a>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz" target="_blank" class="project-link en hidden">View Project</a>
+      </article>
+    </section>
+
+  </div>
+
+  <script>
+    function toggleLanguage() {
+      const esElements = document.querySelectorAll('.es');
+      const enElements = document.querySelectorAll('.en');
+      esElements.forEach(el => el.classList.toggle('hidden'));
+      enElements.forEach(el => el.classList.toggle('hidden'));
+    }
+
+    function filterProjects() {
+      const selected = document.getElementById('category').value;
+      const sections = document.querySelectorAll('.project-section');
+      sections.forEach(section => {
+        if (selected === 'all' || section.id === selected) {
+          section.style.display = '';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
