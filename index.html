@@ -2,236 +2,179 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio de Guillermo Terán</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio de Proyectos - Guillermo Terán</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f9f9f9;
+      background-color: #f5f7fa;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background: #2c3e50;
+      background-color: #004080;
       color: white;
-      padding: 1rem;
-      text-align: center;
-      position: relative;
-    }
-    header img {
-      width: 100px;
-      border-radius: 50%;
-      margin-top: 1rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #34495e;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      padding: 0.75rem 1rem;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background: #2c3e50;
-    }
-    .language-toggle {
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-      background: transparent;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-    .filter {
-      margin: 1rem auto;
+      padding: 20px;
       text-align: center;
     }
-    .filter select {
-      padding: 0.5rem;
-      font-size: 1rem;
+    header h1 {
+      margin: 0;
+      font-weight: 700;
     }
-    .container {
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #2c3e50;
-      padding-bottom: 0.5rem;
-    }
-    .project {
+    section.project {
       background: white;
       border-radius: 8px;
-      padding: 1rem;
-      margin: 1rem 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 25px;
+      transition: box-shadow 0.3s ease;
     }
-    .project h3 {
+    section.project:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    section.project h2 {
       margin-top: 0;
+      color: #004080;
+      font-size: 1.6rem;
     }
-    .project a {
+    section.project p.description {
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+    section.project h3 {
+      margin-bottom: 8px;
+      color: #0066cc;
+      font-size: 1.2rem;
+    }
+    ul.objectives {
+      padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    ul.objectives li {
+      margin-bottom: 6px;
+    }
+    a.github-link {
       display: inline-block;
-      margin-top: 0.5rem;
-      color: #2980b9;
+      background-color: #24292e;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 4px;
       text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
-    .project a:hover {
-      text-decoration: underline;
+    a.github-link:hover {
+      background-color: #444c56;
     }
     footer {
-      background: #2c3e50;
-      color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      color: #666;
+      padding: 20px;
+      font-size: 0.9rem;
     }
-    footer a {
-      color: #1abc9c;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
+    @media (max-width: 600px) {
+      main {
+        padding: 0 10px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <button class="language-toggle" onclick="toggleLanguage()">🇪🇸 / 🇺🇸</button>
-    <h1 id="titulo">Portafolio de Guillermo Terán</h1>
-    <img src="profile.jpg" alt="Foto de perfil de Guillermo Terán">
+    <h1>Portafolio de Proyectos - Guillermo Terán</h1>
+    <p>Analista de datos | Python, SQL, Visualización, Estadística</p>
   </header>
-  <nav>
-    <a href="#datos">Análisis de Datos / Data Analysis</a>
-    <a href="#dashboards">Dashboards en Tableau</a>
-    <a href="#contacto">Contáctame / Contact Me</a>
-  </nav>
-  <div class="filter">
-    <label id="filter-label" for="category">Filtrar por categoría / Filter by category:</label>
-    <select id="category" onchange="filterProjects()">
-      <option value="all">Todos / All</option>
-      <option value="datos">Análisis de Datos</option>
-      <option value="dashboards">Dashboards</option>
-    </select>
-  </div>
-  <div class="container" id="projects-container"></div>
-  <footer id="contacto">
-    <h2 id="contact-title">Contáctame</h2>
-    <p id="contact-text">Puedes escribirme a mi correo electrónico o visitar mi perfil de LinkedIn:</p>
-    <p>
-      📧 <a href="mailto:teranguillermo59@gmail.com">teranguillermo59@gmail.com</a><br />
-      💼 <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank">LinkedIn</a>
-    </p>
+
+  <main>
+    <!-- Ejemplo de proyecto, reemplaza con tus proyectos -->
+    <section class="project">
+      <h2>Análisis de datos para Zuber: Comportamiento de viajes compartidos en Chicago</h2>
+      <p class="description">Identificación de patrones en datos de transporte urbano para optimizar operaciones y estrategias de mercado.</p>
+      <h3>Objetivos principales:</h3>
+      <ul class="objectives">
+        <li>Analizar comportamiento de competidores y volumen de viajes.</li>
+        <li>Identificar barrios más populares para dejar pasajeros.</li>
+        <li>Evaluar impacto del clima en duración de viajes específicos.</li>
+      </ul>
+      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
+    </section>
+
+    <section class="project">
+      <h2>Análisis de tarifas prepago para Megaline</h2>
+      <p class="description">Comparación de planes prepago Surf y Ultimate para determinar rentabilidad y optimizar publicidad.</p>
+      <h3>Objetivos principales:</h3>
+      <ul class="objectives">
+        <li>Preprocesar y limpiar datos de llamadas, mensajes, internet y planes.</li>
+        <li>Calcular ingresos mensuales y cargos adicionales.</li>
+        <li>Analizar comportamiento de usuarios y realizar pruebas estadísticas.</li>
+      </ul>
+      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-tarifas-prepago---Proyecto-Megaline" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
+    </section>
+
+    <!-- Añade aquí los demás proyectos siguiendo esta estructura -->
+
+    <!-- Proyecto 8 -->
+    <section class="project">
+      <h2>Análisis de ventas de videojuegos y detección de patrones de éxito — Proyecto Ice Games</h2>
+      <p class="description">Análisis de datos históricos para identificar factores clave en el éxito comercial de videojuegos y optimizar campañas.</p>
+      <h3>Objetivos principales:</h3>
+      <ul class="objectives">
+        <li>Analizar ventas, géneros, plataformas y reseñas.</li>
+        <li>Identificar plataformas y géneros rentables por región.</li>
+        <li>Validar hipótesis estadísticas sobre preferencias de usuarios.</li>
+      </ul>
+      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
+    </section>
+
+    <!-- Proyecto 9 -->
+    <section class="project">
+      <h2>Priorización de hipótesis y análisis de prueba A/B para optimización de ingresos — Proyecto de E-commerce</h2>
+      <p class="description">Priorización de hipótesis de negocio y análisis estadístico de prueba A/B para mejorar ingresos y experiencia de usuario.</p>
+      <h3>Objetivos principales:</h3>
+      <ul class="objectives">
+        <li>Priorizar hipótesis con frameworks ICE y RICE.</li>
+        <li>Analizar resultados y anomalías en prueba A/B real.</li>
+        <li>Realizar pruebas estadísticas para tomar decisiones fundamentadas.</li>
+      </ul>
+      <a class="github-link" href="https://github.com/GuillermoTeran/Priorizacion-de-hipotesis-y-analisis-de-prueba-A-B-para-optimizacion-de-ingresos---Proyecto-de-Ecome" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
+    </section>
+
+    <!-- Proyecto 10 -->
+    <section class="project">
+      <h2>Análisis de comportamiento de compra de clientes — Proyecto Instacart</h2>
+      <p class="description">Exploración de hábitos de compra, limpieza de datos y visualización para mejorar segmentación y retención.</p>
+      <h3>Objetivos principales:</h3>
+      <ul class="objectives">
+        <li>Preprocesar y limpiar datos de pedidos y productos.</li>
+        <li>Analizar patrones temporales y de recurrencia.</li>
+        <li>Identificar productos populares y comportamiento de reorden.</li>
+      </ul>
+      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
+    </section>
+
+    <!-- Proyecto 11 -->
+    <section class="project">
+      <h2>Análisis de eficiencia de marketing y comportamiento de clientes — Proyecto para Showz</h2>
+      <p class="description">Evaluación del retorno de inversión en marketing y análisis de comportamiento para optimizar presupuesto.</p>
+      <h3>Objetivos principales:</h3>
+      <ul class="objectives">
+        <li>Calcular métricas CAC, LTV y ROMI por canal.</li>
+        <li>Analizar comportamiento y conversión de usuarios.</li>
+        <li>Recomendar estrategias de inversión basadas en datos.</li>
+      </ul>
+      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Guillermo Terán | Analista de Datos</p>
   </footer>
-  <script>
-    const projects = {
-      datos: [
-        {
-          title: "Pruebas de hipótesis y experimentos A/B - Proyecto para SkyAlert",
-          description: "Análisis estadístico para evaluar versiones de página web y mejorar conversiones usando pruebas A/B.",
-          description_en: "Statistical analysis to evaluate web page versions and improve conversions using A/B testing.",
-          url: "https://github.com/GuillermoTeran/Proyecto-SkyAlert-AB"
-        },
-        {
-          title: "Estudio de correlaciones de accidentes viales y delitos en CDMX",
-          description: "Análisis de correlación entre accidentes de tránsito y criminalidad por alcaldía utilizando pandas y geopandas.",
-          description_en: "Correlation analysis between traffic accidents and crime by borough using pandas and geopandas.",
-          url: "https://github.com/GuillermoTeran/Estudio-accidentes-delitos-CDMX"
-        },
-        {
-          title: "Análisis de eficiencia de marketing y comportamiento de clientes — Showz",
-          description: "Evaluación del ROI de canales de adquisición, segmentación de clientes y recomendaciones de inversión.",
-          description_en: "Evaluation of ROI for acquisition channels, customer segmentation, and investment recommendations.",
-          url: "https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz"
-        }
-      ],
-      dashboards: [
-        {
-          title: "Dashboard de accidentes viales en la CDMX con Tableau",
-          description: "Visualización de datos de accidentes para entender patrones por zona y tipo de incidente.",
-          description_en: "Visualization of accident data to understand patterns by area and type of incident.",
-          url: "https://public.tableau.com/views/DashboardAccidentesCDMX_17099380248260/DashboardAccidentesCDMX?:language=es-ES&:sid=&:display_count=n&:origin=viz_share_link"
-        }
-      ]
-    };
-
-    let currentLang = 'es';
-
-    function renderProjects() {
-      const container = document.getElementById('projects-container');
-      container.innerHTML = '';
-      for (const [key, sectionProjects] of Object.entries(projects)) {
-        const section = document.createElement('section');
-        section.id = key;
-        const title = document.createElement('h2');
-        title.textContent = {
-          datos: currentLang === 'es' ? 'Análisis de Datos' : 'Data Analysis',
-          dashboards: currentLang === 'es' ? 'Dashboards en Tableau' : 'Tableau Dashboards'
-        }[key];
-        section.appendChild(title);
-
-        sectionProjects.forEach(project => {
-          const article = document.createElement('article');
-          article.className = 'project';
-
-          const h3 = document.createElement('h3');
-          h3.textContent = project.title;
-
-          const p = document.createElement('p');
-          p.textContent = currentLang === 'es' ? project.description : project.description_en;
-
-          const a = document.createElement('a');
-          a.href = project.url;
-          a.target = '_blank';
-          a.textContent = currentLang === 'es' ? 'Ver proyecto' : 'View project';
-
-          article.appendChild(h3);
-          article.appendChild(p);
-          article.appendChild(a);
-          section.appendChild(article);
-        });
-        container.appendChild(section);
-      }
-    }
-
-    function toggleLanguage() {
-      currentLang = currentLang === 'es' ? 'en' : 'es';
-      document.getElementById('titulo').textContent = currentLang === 'es'
-        ? 'Portafolio de Guillermo Terán'
-        : "Guillermo Terán's Portfolio";
-      document.getElementById('filter-label').textContent = currentLang === 'es'
-        ? 'Filtrar por categoría:'
-        : 'Filter by category:';
-      document.getElementById('contact-title').textContent = currentLang === 'es'
-        ? 'Contáctame'
-        : 'Contact Me';
-      document.getElementById('contact-text').textContent = currentLang === 'es'
-        ? 'Puedes escribirme a mi correo electrónico o visitar mi perfil de LinkedIn:'
-        : 'You can email me or visit my LinkedIn profile:';
-      renderProjects();
-    }
-
-    function filterProjects() {
-      const selected = document.getElementById('category').value;
-      document.querySelectorAll('.container > section').forEach(section => {
-        section.style.display = selected === 'all' || section.id === selected ? '' : 'none';
-      });
-    }
-
-    renderProjects();
-  </script>
 </body>
 </html>
