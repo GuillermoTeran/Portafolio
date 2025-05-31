@@ -456,7 +456,6 @@ Se recomendó ajustar la asignación de operadores en función del tráfico de l
 
 Se propuso desarrollar alertas automáticas para detectar operadores ineficaces en tiempo real.
 
-
 ## Caso de Estudio: Evaluación de una Prueba A/B para un Sistema de Recomendaciones
 Descripción del proyecto:
 
