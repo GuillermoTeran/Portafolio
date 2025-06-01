@@ -1,122 +1,219 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Proyectos - Guillermo Teran</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Portfolio - Guillermo Teran</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       color: #333;
       margin: 0;
-      padding: 20px;
+      padding: 0;
     }
-    h1 {
+    header {
+      background-color: #2980b9;
+      color: white;
+      padding: 30px 20px;
       text-align: center;
-      color: #2c3e50;
     }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+    }
+    h1 { margin-top: 10px; font-size: 2em; }
+    .contact-info { font-size: 1rem; margin-top: 10px; }
+    nav {
+      background-color: #1c5980;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 10px;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+    .language-switcher button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: white;
+      font-size: 1.2em;
+    }
+    .intro {
+      background-color: #ffffff;
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .intro h2 { color: #2980b9; }
+    .projects-section {
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 0 20px;
+    }
+    .projects-section h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2980b9;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .filter-buttons button:hover { background-color: #1c5980; }
+    .project-category { margin-bottom: 40px; }
     .project {
       background-color: #fff;
       padding: 20px;
       margin-bottom: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .project h2 {
-      color: #2980b9;
-    }
+    .project h3 { color: #2980b9; }
     .project a {
       color: #2980b9;
       text-decoration: none;
     }
-    .project a:hover {
-      text-decoration: underline;
+    .project a:hover { text-decoration: underline; }
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 10px;
     }
-    ul {
-      margin-top: 0;
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    footer button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2980b9;
+      color: white;
+      cursor: pointer;
+    }
+    footer button:hover { background-color: #1c5980; }
+    @media (max-width: 600px) {
+      nav { flex-direction: column; text-align: center; }
     }
   </style>
+  <script>
+    function filterProjects(category) {
+      const allCategories = document.querySelectorAll('.project-category');
+      allCategories.forEach(cat => cat.style.display = 'none');
+      document.getElementById(category).style.display = 'block';
+    }
+  </script>
 </head>
 <body>
-  <h1>Portafolio de Proyectos - Guillermo Teran</h1>
-
-  <div class="project">
-    <h2>1. Análisis de Datos para Zuber: Comportamiento de viajes compartidos en Chicago</h2>
-    <p><strong>Resumen:</strong> Exploración y visualización del comportamiento de los usuarios y patrones de viajes en la ciudad de Chicago usando datos de Zuber. Se identificaron tendencias geográficas, temporales y de uso.</p>
-    <p><strong>Herramientas:</strong> Python (Pandas, Matplotlib, Seaborn), Jupyter Notebook</p>
-    <p><a href="https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>2. Análisis de tarifas prepago para Megaline</h2>
-    <p><strong>Resumen:</strong> Estudio comparativo entre planes "Smart" y "Ultra" para entender el comportamiento de llamadas, mensajes y datos móviles, ayudando a definir una estrategia tarifaria óptima.</p>
-    <p><strong>Herramientas:</strong> Python, Jupyter Notebook, Estadística Descriptiva e Inferencial</p>
-    <p><a href="https://github.com/GuillermoTeran/Analisis-de-tarifas-prepago---Proyecto-Megaline" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>3. Análisis de venta de videojuegos y detección de patrones de éxito – Proyecto Ice Games</h2>
-    <p><strong>Resumen:</strong> Evaluación de datos de ventas para predecir el éxito de futuros lanzamientos. Se identificaron plataformas líderes, géneros preferidos y patrones estacionales en diferentes regiones.</p>
-    <p><strong>Herramientas:</strong> Python, Pandas, Seaborn, Matplotlib</p>
-    <p><a href="https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>4. Priorización de hipótesis y análisis de pruebas A/B – Proyecto de E-commerce</h2>
-    <p><strong>Resumen:</strong> Evaluación de hipótesis con el framework ICE y análisis de dos pruebas A/B para medir el impacto de cambios en el sitio web sobre la conversión y el comportamiento de los usuarios.</p>
-    <p><strong>Herramientas:</strong> Python, Scipy, Pandas, Estadística Inferencial, Visualización de Datos</p>
-    <p><a href="https://github.com/GuillermoTeran/Priorizacion-de-hipotesis-y-analisis-de-prueba-A-B-para-optimizacion-de-ingresos---Proyecto-de-Ecome" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>5. Análisis de comportamiento de compra de clientes – Proyecto Instacart</h2>
-    <p><strong>Resumen:</strong> Estudio del patrón de compras de clientes para generar insights sobre hábitos, frecuencia, productos más demandados y segmentación del comportamiento del consumidor.</p>
-    <p><strong>Herramientas:</strong> Python, SQL, Pandas, Visualización con Matplotlib/Seaborn</p>
-    <p><a href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>6. Análisis de eficiencia de marketing y comportamiento de clientes – Proyecto para Showz</h2>
-    <p><strong>Resumen:</strong> Se identificaron los canales de adquisición más rentables, comportamiento por segmento de usuarios y ROI de campañas de marketing.</p>
-    <p><strong>Herramientas:</strong> Python, SQL, Estadística, Tableau</p>
-    <p><a href="https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>7. Predicción de cancelación de clientes y segmentación de usuarios – Proyecto para Model Fitness</h2>
-    <p><strong>Resumen:</strong> Se entrenaron modelos predictivos para identificar clientes con alta probabilidad de cancelar la suscripción. Se implementó una estrategia de retención basada en clustering de usuarios.</p>
-    <p><strong>Herramientas:</strong> Python (Sklearn, Pandas), Machine Learning, Clustering K-Means</p>
-    <p><a href="https://github.com/GuillermoTeran/Prediccion-de-cancelacion-de-clientes-y-segmentacion-de-usuarios-Proyecto-para-Model-Fitness" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>8. Caso de Estudio: Dashboard de Tendencias de Videos en YouTube</h2>
-    <p><strong>Resumen:</strong> Automatización de reportes de tendencias semanales en YouTube usando un dashboard en Tableau, enfocado en categorías más virales y distribución geográfica.</p>
-    <p><strong>Herramientas:</strong> Tableau Public, Python (Pandas), PostgreSQL (simulado)</p>
-    <p><a href="https://public.tableau.com/views/Libro1_17212954380800/Dashboard1" target="_blank">Ver Dashboard</a> | <a href="https://github.com/GuillermoTeran/-Caso-de-Estudio-Dashboard-de-Tendencias-de-Videos-en-YouTube" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>9. Análisis de comportamiento de usuarios y test A/A/B en una app de productos alimenticios</h2>
-    <p><strong>Resumen:</strong> Análisis del embudo de conversión y evaluación de un experimento A/A/B para medir el impacto del rediseño en tipografía sobre la conversión de usuarios.</p>
-    <p><strong>Herramientas:</strong> Python (Pandas, Scipy, Statsmodels), Visualización, Pruebas de hipótesis</p>
-    <p><a href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-usuario-y-test-A-A-B-en-una-app-de-productos-alimenticios" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>10. Caso de Estudio SQL: Análisis del Comportamiento de Lectores Durante la Pandemia</h2>
-    <p><strong>Resumen:</strong> Análisis de una base de datos relacional para entender patrones de lectura, calificaciones y reseñas de usuarios durante la pandemia. Se identificaron oportunidades estratégicas para el diseño de una nueva plataforma de lectura digital.</p>
-    <p><strong>Herramientas:</strong> SQL (PostgreSQL), Python (Pandas), Jupyter Notebook</p>
-    <p><a href="https://github.com/GuillermoTeran/Caso-de-Estudio-SQL-Analisis-del-Comportamiento-de-Lectores-Durante-la-Pandemia" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h2>11. Caso de Estudio: Detección de Operadores Ineficaces en un Servicio de Telefonía Virtual</h2>
-    <p><strong>Resumen:</strong> Análisis exploratorio y validación estadística para identificar operadores con bajo rendimiento, usando datos de llamadas y clientes. Se propusieron mejoras en asignación y monitoreo.</p>
-    <p><strong>Herramientas:</strong> Python (Pandas, SciPy, Seaborn), Jupyter Notebook, Estadística</p>
-    <p><a href="https://github.com/GuillermoTeran/Caso-de-Estudio-Deteccion-de-Operadores-Ineficaces-en-un-Servicio-de-Telefonia-Virtual" target="_blank">Repositorio GitHub</a></p>
-  </div>
-
+  <header>
+    <img src="https://raw.githubusercontent.com/GuillermoTeran/Portafolio/main/profile.jpg" alt="Profile photo" class="profile-pic">
+    <h1>Guillermo Teran</h1>
+    <div class="contact-info">
+      <p>📞 +351 961 900 127</p>
+      <p>📍 Fátima, Portugal</p>
+    </div>
+  </header>
+  <nav>
+    <div>
+      <a href="#intro">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="language-switcher">
+      <button onclick="window.location.href='index.html'" title="Español">🇪🇸</button>
+      <button onclick="window.location.href='index-en.html'" title="English">🇬🇧</button>
+    </div>
+  </nav>
+  <section class="intro" id="intro">
+    <h2>Professional Profile</h2>
+    <p>I am a Data Analyst with a background in Business Administration and experience in credit, collections, and KPI development. I am passionate about transforming data into valuable insights for strategic decision-making. I have strong skills in tools such as Advanced Excel, SQL, Python, and Tableau, which allow me to efficiently extract, clean, and visualize data. I am looking for an opportunity to apply my Python skills and contribute to optimizing analytical processes by generating strategic reports and improving data-driven decisions.</p>
+    <p>Outside of work, I enjoy hiking, watching football and tennis matches, and reading articles on politics, business, and technology.</p>
+  </section>
+  <section class="projects-section" id="projects">
+    <h2>Projects</h2>
+    <div class="filter-buttons">
+      <button onclick="filterProjects('analisis')">Data Analysis</button>
+      <button onclick="filterProjects('dashboards')">Dashboards</button>
+    </div>
+    <div class="project-category" id="analisis">
+      <h3>Data Analysis</h3>
+      <div class="project">
+        <h3>Customer Churn Prediction and User Segmentation - Model Fitness</h3>
+        <p>Exploratory data analysis and predictive modeling using Python to determine the probability of client churn and cluster user profiles.</p>
+        <a href="https://github.com/GuillermoTeran/Prediccion-de-cancelacion-de-clientes-y-segmentacion-de-usuarios-Proyecto-para-Model-Fitness" target="_blank">View on GitHub</a>
+        <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd" alt="Fitness analytics">
+      </div>
+      <div class="project">
+        <h3>A/B Testing and User Behavior - Food App</h3>
+        <p>Implemented A/A/B test experiments and behavior analysis of app users to guide marketing strategy.</p>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-usuario-y-test-A-A-B-en-una-app-de-productos-alimenticios" target="_blank">View on GitHub</a>
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Food delivery app A/B testing">
+      </div>
+      <div class="project">
+        <h3>SQL Study Case - Reader Behavior During the Pandemic</h3>
+        <p>SQL-based analysis of article reading habits during the COVID-19 pandemic to uncover trends and engagement.</p>
+        <a href="https://github.com/GuillermoTeran/Caso-de-Estudio-SQL-Analisis-del-Comportamiento-de-Lectores-Durante-la-Pandemia" target="_blank">View on GitHub</a>
+        <img src="https://images.unsplash.com/photo-1584433144859-1fc3ab64ed7b" alt="Reading behavior during COVID">
+      </div>
+      <div class="project">
+        <h3>Inefficient Operator Detection - Telco Service</h3>
+        <p>Python and pandas applied to discover performance gaps between call center agents and propose improvements.</p>
+        <a href="https://github.com/GuillermoTeran/Caso-de-Estudio-Deteccion-de-Operadores-Ineficaces-en-un-Servicio-de-Telefonia-Virtual" target="_blank">View on GitHub</a>
+        <img src="https://images.unsplash.com/photo-1581092339218-2d4fdb70b5a5" alt="Telco analysis">
+      </div>
+      <div class="project">
+        <h3>Ride-Sharing Analysis - Zuber Project</h3>
+        <p>Analyzed shared ride patterns in Chicago to support expansion strategy and marketing focus.</p>
+        <a href="https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago" target="_blank">View on GitHub</a>
+        <img src="https://images.unsplash.com/photo-1549921296-3a64c5f0e1ad" alt="Ride-sharing data">
+      </div>
+    </div>
+    <div class="project-category" id="dashboards" style="display:none;">
+      <h3>Dashboards</h3>
+      <div class="project">
+        <h3>YouTube Video Trends Dashboard</h3>
+        <p>Interactive Tableau dashboard displaying video trends from YouTube for comparative market insight.</p>
+        <a href="https://github.com/GuillermoTeran/-Caso-de-Estudio-Dashboard-de-Tendencias-de-Videos-en-YouTube" target="_blank">View on GitHub</a>
+        <img src="https://images.unsplash.com/photo-1612831455547-2f26619b5e1f" alt="YouTube dashboard">
+      </div>
+    </div>
+  </section>
+  <footer id="contact">
+    <h2>Want to contact me?</h2>
+    <a href="mailto:teránguillermo59@gmail.com"><button>Contact Me</button></a>
+    <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank"><button>LinkedIn</button></a>
+  </footer>
 </body>
 </html>
