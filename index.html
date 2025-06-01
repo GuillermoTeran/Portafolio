@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guillermo Teran - Portafolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guillermo Teran - Portafolio / Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -34,8 +34,8 @@
       border-radius: 50%;
       object-fit: cover;
     }
-    .intro {
-      max-width: 800px;
+    .intro, .projects-section {
+      max-width: 1000px;
       margin: 30px auto;
       padding: 0 20px;
     }
@@ -43,9 +43,7 @@
       line-height: 1.6;
     }
     .projects-section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin-top: 40px;
     }
     .project {
       background-color: white;
@@ -83,75 +81,102 @@
       color: white;
       text-decoration: none;
     }
+    .lang-selector {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .lang-selector button {
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    /* Ocultar contenido de idioma inicialmente */
+    .lang-content {
+      display: none;
+    }
+    .lang-content.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Guillermo Teran</h1>
     <h2>Data Analyst</h2>
-    <img src="https://raw.githubusercontent.com/GuillermoTeran/Portafolio/main/profile.jpg" alt="Foto de perfil">
+    <img src="https://raw.githubusercontent.com/GuillermoTeran/Portafolio/main/profile.jpg" alt="Foto de perfil" />
     <p>Fátima, Portugal | +351 961 900 127</p>
   </header>
 
-  <section class="intro">
-    <p>Soy Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente. Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.</p>
-    <p>Disfruto de caminatas al aire libre, ver partidos de fútbol y tennis y leer artículos de política, negocios y tecnología.</p>
-  </section>
+  <div class="lang-selector">
+    <button id="btn-es">Español</button>
+    <button id="btn-en">English</button>
+  </div>
 
-  <section class="projects-section">
-    <h2>Proyectos</h2>
+  <!-- Contenido en Español -->
+  <div id="content-es" class="lang-content active">
+    <section class="intro">
+      <p>Soy Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente. Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.</p>
+      <p>Disfruto de caminatas al aire libre, ver partidos de fútbol y tennis y leer artículos de política, negocios y tecnología.</p>
+    </section>
 
-    <!-- Proyectos 1 al 5 ya insertados arriba -->
-    <!-- Proyectos 6 al 11 añadidos -->
+    <section class="projects-section">
+      <h2>Proyectos</h2>
 
-    <div class="project">
-      <h3>6. Detección de operadores ineficaces en un servicio de telefonía virtual</h3>
-      <p><strong>Resumen:</strong> Análisis de interacciones para identificar operadores con bajo rendimiento en una plataforma de atención al cliente digital. Se usaron métricas de eficiencia y satisfacción del cliente.</p>
-      <p><strong>Herramientas:</strong> Python, Pandas, Matplotlib, Seaborn</p>
-      <img src="https://images.unsplash.com/photo-1581090700227-1e8c7b60d6bc" alt="Call Center Analytics">
-    </div>
+      <div class="project">
+        <h3>1. Análisis de Datos para Zuber: Comportamiento de viajes compartidos en Chicago</h3>
+        <p><strong>Resumen:</strong> Exploración y visualización del comportamiento de los usuarios y patrones de viajes en la ciudad de Chicago usando datos de Zuber. Se identificaron tendencias geográficas, temporales y de uso.</p>
+        <p><strong>Herramientas:</strong> Python (Pandas, Matplotlib, Seaborn), Jupyter Notebook</p>
+        <img src="https://images.unsplash.com/photo-1532530790808-84c5630495b1" alt="Zuber Chicago" />
+      </div>
 
-    <div class="project">
-      <h3>7. Análisis del comportamiento de lectores durante la pandemia – SQL</h3>
-      <p><strong>Resumen:</strong> Consulta y visualización de datos bibliotecarios para identificar cambios en hábitos de lectura antes y durante la pandemia. Segmentación por edades, géneros literarios y frecuencia de préstamos.</p>
-      <p><strong>Herramientas:</strong> SQL, PostgreSQL, Tableau</p>
-      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Lectura Pandemia">
-    </div>
+      <div class="project">
+        <h3>2. Análisis de tarifas prepago para Megaline</h3>
+        <p><strong>Resumen:</strong> Estudio comparativo entre planes "Smart" y "Ultra" para entender el comportamiento de llamadas, mensajes y datos móviles, ayudando a definir una estrategia tarifaria óptima.</p>
+        <p><strong>Herramientas:</strong> Python, Jupyter Notebook, Estadística Descriptiva e Inferencial</p>
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Tarifas Prepago" />
+      </div>
 
-    <div class="project">
-      <h3>8. Dashboard de tendencias de videos en YouTube</h3>
-      <p><strong>Resumen:</strong> Creación de un dashboard interactivo que muestra métricas clave sobre videos populares en YouTube: visualizaciones, likes, categorías, y temporalidad de tendencias.</p>
-      <p><strong>Herramientas:</strong> Tableau, Excel, SQL</p>
-      <img src="https://images.unsplash.com/photo-1617715087897-51996b7fd93c" alt="YouTube Dashboard">
-    </div>
+      <div class="project">
+        <h3>3. Análisis de venta de videojuegos y detección de patrones de éxito – Proyecto Ice Games</h3>
+        <p><strong>Resumen:</strong> Evaluación de datos de ventas para predecir el éxito de futuros lanzamientos. Se identificaron plataformas líderes, géneros preferidos y patrones estacionales en diferentes regiones.</p>
+        <p><strong>Herramientas:</strong> Python, Pandas, Seaborn, Matplotlib</p>
+        <img src="https://images.unsplash.com/photo-1606813902472-c6409bc3c39e" alt="Videojuegos" />
+      </div>
 
-    <div class="project">
-      <h3>9. Análisis de comportamiento de usuario y test A/A/B en una app de productos alimenticios</h3>
-      <p><strong>Resumen:</strong> Exploración del comportamiento de usuarios antes y después de cambios en una app, validando la estructura del experimento mediante pruebas A/A y A/B.</p>
-      <p><strong>Herramientas:</strong> Python, SciPy, Pandas, Matplotlib</p>
-      <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4" alt="App A/B Testing">
-    </div>
+      <div class="project">
+        <h3>4. Priorización de hipótesis y análisis de pruebas A/B – Proyecto de E-commerce</h3>
+        <p><strong>Resumen:</strong> Evaluación de hipótesis con el framework ICE y análisis de dos pruebas A/B para medir el impacto de cambios en el sitio web sobre la conversión y el comportamiento de los usuarios.</p>
+        <p><strong>Herramientas:</strong> Python, Scipy, Pandas, Estadística Inferencial, Visualización de Datos</p>
+        <img src="https://images.unsplash.com/photo-1581091870620-3b6fa810cb7e" alt="E-commerce AB Test" />
+      </div>
 
-    <div class="project">
-      <h3>10. Análisis de cancelación de clientes y segmentación de usuarios – Proyecto Model Fitness</h3>
-      <p><strong>Resumen:</strong> Modelado de probabilidad de cancelación y segmentación de clientes de un gimnasio en función de su comportamiento de asistencia y demografía.</p>
-      <p><strong>Herramientas:</strong> Python, Scikit-Learn, Pandas, Matplotlib</p>
-      <img src="https://images.unsplash.com/photo-1594737625785-cdfb0c0c3b95" alt="Fitness Analytics">
-    </div>
+      <div class="project">
+        <h3>5. Análisis de comportamiento de compra de clientes – Proyecto Instacart</h3>
+        <p><strong>Resumen:</strong> Estudio del patrón de compras de clientes para generar insights sobre hábitos, frecuencia, productos más demandados y segmentación del comportamiento del consumidor.</p>
+        <p><strong>Herramientas:</strong> Python, SQL, Pandas, Visualización con Matplotlib/Seaborn</p>
+        <img src="https://images.unsplash.com/photo-1580717926983-9c8f2866be4c" alt="Instacart Customer Analysis" />
+      </div>
 
-    <div class="project">
-      <h3>11. Análisis de eficiencia de marketing y comportamiento de clientes – Proyecto para Showz</h3>
-      <p><strong>Resumen:</strong> Evaluación de la efectividad de campañas de marketing mediante la segmentación de clientes y análisis de tasa de conversión.</p>
-      <p><strong>Herramientas:</strong> Python, SQL, Tableau</p>
-      <img src="https://images.unsplash.com/photo-1581093448794-1f7856a20752" alt="Marketing Analytics">
-    </div>
+      <div class="project">
+        <h3>6. Predicción de abandono y segmentación de usuarios – Proyecto Model Fitness</h3>
+        <p><strong>Resumen:</strong> Modelado predictivo para predecir abandono de clientes y segmentación para mejorar estrategias de retención basadas en comportamiento y demografía.</p>
+        <p><strong>Herramientas:</strong> Python, Scikit-learn, Pandas, Visualización de Datos</p>
+        <img src="https://images.unsplash.com/photo-1508385082359-fb9fc9320d3c" alt="Customer Churn" />
+      </div>
 
-  </section>
+      <div class="project">
+        <h3>7. Dashboard de tendencias de videos en YouTube</h3>
+        <p><strong>Resumen:</strong> Desarrollo de un dashboard que muestra tendencias de videos de YouTube, incluyendo conteo de vistas, métricas de interacción y temas populares a lo largo del tiempo.</p>
+        <p><strong>Herramientas:</strong> Tableau, SQL, Visualización de Datos</p>
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="YouTube Trends Dashboard" />
+      </div>
 
-  <footer class="footer">
-    <button onclick="location.href='mailto:teránguillermo59@gmail.com'">¿Contáctame?</button>
-    <button onclick="window.open('https://www.linkedin.com/in/guillermo-teran', '_blank')">LinkedIn</button>
-  </footer>
-
-</body>
-</html>
+      <div class="project">
+        <h3>8. Análisis de venta de videojuegos y patrones de éxito – Proyecto Ice Games (Dashboard)</h3>
+        <p><strong>Resumen:</strong> Dashboard interactivo que presenta análisis de ventas y patrones de éxito para videojuegos en diferentes
