@@ -1,180 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portafolio de Proyectos - Guillermo Terán</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Proyectos - Guillermo Teran</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f5f7fa;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
       margin: 0;
-      font-weight: 700;
-    }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    section.project {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       padding: 20px;
-      margin-bottom: 25px;
-      transition: box-shadow 0.3s ease;
     }
-    section.project:hover {
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    }
-    section.project h2 {
-      margin-top: 0;
-      color: #004080;
-      font-size: 1.6rem;
-    }
-    section.project p.description {
-      font-style: italic;
-      margin-bottom: 15px;
-    }
-    section.project h3 {
-      margin-bottom: 8px;
-      color: #0066cc;
-      font-size: 1.2rem;
-    }
-    ul.objectives {
-      padding-left: 20px;
-      margin-top: 0;
-      margin-bottom: 15px;
-    }
-    ul.objectives li {
-      margin-bottom: 6px;
-    }
-    a.github-link {
-      display: inline-block;
-      background-color: #24292e;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-    a.github-link:hover {
-      background-color: #444c56;
-    }
-    footer {
+    h1 {
       text-align: center;
-      color: #666;
-      padding: 20px;
-      font-size: 0.9rem;
+      color: #2c3e50;
     }
-    @media (max-width: 600px) {
-      main {
-        padding: 0 10px;
-      }
+    .project {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .project h2 {
+      color: #2980b9;
+    }
+    .project a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .project a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Portafolio de Proyectos - Guillermo Terán</h1>
-    <p>Analista de datos | Python, SQL, Visualización, Estadística</p>
-  </header>
+  <h1>Portafolio de Proyectos - Guillermo Teran</h1>
 
-  <main>
-    <!-- Ejemplo de proyecto, reemplaza con tus proyectos -->
-    <section class="project">
-      <h2>Análisis de datos para Zuber: Comportamiento de viajes compartidos en Chicago</h2>
-      <p class="description">Identificación de patrones en datos de transporte urbano para optimizar operaciones y estrategias de mercado.</p>
-      <h3>Objetivos principales:</h3>
-      <ul class="objectives">
-        <li>Analizar comportamiento de competidores y volumen de viajes.</li>
-        <li>Identificar barrios más populares para dejar pasajeros.</li>
-        <li>Evaluar impacto del clima en duración de viajes específicos.</li>
-      </ul>
-      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
-    </section>
+  <div class="project">
+    <h2>1. Análisis de Datos para Zuber: Comportamiento de viajes compartidos en Chicago</h2>
+    <p><strong>Resumen:</strong> Exploración y visualización del comportamiento de los usuarios y patrones de viajes en la ciudad de Chicago usando datos de Zuber. Se identificaron tendencias geográficas, temporales y de uso.</p>
+    <p><strong>Herramientas:</strong> Python (Pandas, Matplotlib, Seaborn), Jupyter Notebook</p>
+  </div>
 
-    <section class="project">
-      <h2>Análisis de tarifas prepago para Megaline</h2>
-      <p class="description">Comparación de planes prepago Surf y Ultimate para determinar rentabilidad y optimizar publicidad.</p>
-      <h3>Objetivos principales:</h3>
-      <ul class="objectives">
-        <li>Preprocesar y limpiar datos de llamadas, mensajes, internet y planes.</li>
-        <li>Calcular ingresos mensuales y cargos adicionales.</li>
-        <li>Analizar comportamiento de usuarios y realizar pruebas estadísticas.</li>
-      </ul>
-      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-tarifas-prepago---Proyecto-Megaline" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
-    </section>
+  <div class="project">
+    <h2>2. Análisis de tarifas prepago para Megaline</h2>
+    <p><strong>Resumen:</strong> Estudio comparativo entre planes "Smart" y "Ultra" para entender el comportamiento de llamadas, mensajes y datos móviles, ayudando a definir una estrategia tarifaria óptima.</p>
+    <p><strong>Herramientas:</strong> Python, Jupyter Notebook, Estadística Descriptiva e Inferencial</p>
+  </div>
 
-    <!-- Añade aquí los demás proyectos siguiendo esta estructura -->
+  <div class="project">
+    <h2>3. Análisis de venta de videojuegos y detección de patrones de éxito – Proyecto Ice Games</h2>
+    <p><strong>Resumen:</strong> Evaluación de datos de ventas para predecir el éxito de futuros lanzamientos. Se identificaron plataformas líderes, géneros preferidos y patrones estacionales en diferentes regiones.</p>
+    <p><strong>Herramientas:</strong> Python, Pandas, Seaborn, Matplotlib</p>
+  </div>
 
-    <!-- Proyecto 8 -->
-    <section class="project">
-      <h2>Análisis de ventas de videojuegos y detección de patrones de éxito — Proyecto Ice Games</h2>
-      <p class="description">Análisis de datos históricos para identificar factores clave en el éxito comercial de videojuegos y optimizar campañas.</p>
-      <h3>Objetivos principales:</h3>
-      <ul class="objectives">
-        <li>Analizar ventas, géneros, plataformas y reseñas.</li>
-        <li>Identificar plataformas y géneros rentables por región.</li>
-        <li>Validar hipótesis estadísticas sobre preferencias de usuarios.</li>
-      </ul>
-      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
-    </section>
+  <div class="project">
+    <h2>4. Priorización de hipótesis y análisis de pruebas A/B – Proyecto de E-commerce</h2>
+    <p><strong>Resumen:</strong> Evaluación de hipótesis con el framework ICE y análisis de dos pruebas A/B para medir el impacto de cambios en el sitio web sobre la conversión y el comportamiento de los usuarios.</p>
+    <p><strong>Herramientas:</strong> Python, Scipy, Pandas, Estadística Inferencial, Visualización de Datos</p>
+  </div>
 
-    <!-- Proyecto 9 -->
-    <section class="project">
-      <h2>Priorización de hipótesis y análisis de prueba A/B para optimización de ingresos — Proyecto de E-commerce</h2>
-      <p class="description">Priorización de hipótesis de negocio y análisis estadístico de prueba A/B para mejorar ingresos y experiencia de usuario.</p>
-      <h3>Objetivos principales:</h3>
-      <ul class="objectives">
-        <li>Priorizar hipótesis con frameworks ICE y RICE.</li>
-        <li>Analizar resultados y anomalías en prueba A/B real.</li>
-        <li>Realizar pruebas estadísticas para tomar decisiones fundamentadas.</li>
-      </ul>
-      <a class="github-link" href="https://github.com/GuillermoTeran/Priorizacion-de-hipotesis-y-analisis-de-prueba-A-B-para-optimizacion-de-ingresos---Proyecto-de-Ecome" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
-    </section>
+  <div class="project">
+    <h2>5. Análisis de comportamiento de compra de clientes – Proyecto Instacart</h2>
+    <p><strong>Resumen:</strong> Estudio del patrón de compras de clientes para generar insights sobre hábitos, frecuencia, productos más demandados y segmentación del comportamiento del consumidor.</p>
+    <p><strong>Herramientas:</strong> Python, SQL, Pandas, Visualización con Matplotlib/Seaborn</p>
+  </div>
 
-    <!-- Proyecto 10 -->
-    <section class="project">
-      <h2>Análisis de comportamiento de compra de clientes — Proyecto Instacart</h2>
-      <p class="description">Exploración de hábitos de compra, limpieza de datos y visualización para mejorar segmentación y retención.</p>
-      <h3>Objetivos principales:</h3>
-      <ul class="objectives">
-        <li>Preprocesar y limpiar datos de pedidos y productos.</li>
-        <li>Analizar patrones temporales y de recurrencia.</li>
-        <li>Identificar productos populares y comportamiento de reorden.</li>
-      </ul>
-      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
-    </section>
+  <div class="project">
+    <h2>6. Análisis de eficiencia de marketing y comportamiento de clientes – Proyecto para Showz</h2>
+    <p><strong>Resumen:</strong> Se identificaron los canales de adquisición más rentables, comportamiento por segmento de usuarios y ROI de campañas de marketing.</p>
+    <p><strong>Herramientas:</strong> Python, SQL, Estadística, Tableau</p>
+  </div>
 
-    <!-- Proyecto 11 -->
-    <section class="project">
-      <h2>Análisis de eficiencia de marketing y comportamiento de clientes — Proyecto para Showz</h2>
-      <p class="description">Evaluación del retorno de inversión en marketing y análisis de comportamiento para optimizar presupuesto.</p>
-      <h3>Objetivos principales:</h3>
-      <ul class="objectives">
-        <li>Calcular métricas CAC, LTV y ROMI por canal.</li>
-        <li>Analizar comportamiento y conversión de usuarios.</li>
-        <li>Recomendar estrategias de inversión basadas en datos.</li>
-      </ul>
-      <a class="github-link" href="https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz" target="_blank" rel="noopener noreferrer">Ver proyecto en GitHub</a>
-    </section>
-  </main>
+  <div class="project">
+    <h2>7. Predicción de cancelación de clientes y segmentación de usuarios – Proyecto para Model Fitness</h2>
+    <p><strong>Resumen:</strong> Se entrenaron modelos predictivos para identificar clientes con alta probabilidad de cancelar la suscripción. Se implementó una estrategia de retención basada en clustering de usuarios.</p>
+    <p><strong>Herramientas:</strong> Python (Sklearn, Pandas), Machine Learning, Clustering K-Means</p>
+  </div>
 
-  <footer>
-    <p>© 2025 Guillermo Terán | Analista de Datos</p>
-  </footer>
+  <div class="project">
+    <h2>8. Caso de Estudio: Dashboard de Tendencias de Videos en YouTube</h2>
+    <p><strong>Resumen:</strong> Automatización de reportes de tendencias semanales en YouTube usando un dashboard en Tableau, enfocado en categorías más virales y distribución geográfica.</p>
+    <p><strong>Herramientas:</strong> Tableau Public, Python (Pandas), PostgreSQL (simulado)</p>
+    <p><a href="https://public.tableau.com/views/Libro1_17212954380800/Dashboard1" target="_blank">Ver Dashboard</a> | <a href="https://github.com/GuillermoTeran/-Caso-de-Estudio-Dashboard-de-Tendencias-de-Videos-en-YouTube" target="_blank">Repositorio GitHub</a></p>
+  </div>
+
+  <div class="project">
+    <h2>9. Análisis de comportamiento de usuarios y test A/A/B en una app de productos alimenticios</h2>
+    <p><strong>Resumen:</strong> Análisis del embudo de conversión y evaluación de un experimento A/A/B para medir el impacto del rediseño en tipografía sobre la conversión de usuarios.</p>
+    <p><strong>Herramientas:</strong> Python (Pandas, Scipy, Statsmodels), Visualización, Pruebas de hipótesis</p>
+    <p><a href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-usuario-y-test-A-A-B-en-una-app-de-productos-alimenticios" target="_blank">Repositorio GitHub</a></p>
+  </div>
+
 </body>
 </html>
